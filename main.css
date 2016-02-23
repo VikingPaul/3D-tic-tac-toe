@@ -1,6 +1,6 @@
 body {
   background-color: black;
-  text-shadow: slategrey 6px 6px 6px;
+  text-shadow: slategrey 6px 6px 5px;
 }
 header {
   margin-left: 175px;
@@ -31,10 +31,12 @@ section {
 #p1 {
   font-size: 44px;
   float: left;
+  color: red;
 }
 #p2 {
   font-size: 44px;
   float: right;
+  color: blue;
 }
 div {
   border: 3px solid black;

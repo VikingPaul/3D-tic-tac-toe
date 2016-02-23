@@ -5,7 +5,6 @@ var newGame = document.getElementById("button")
 var turn = true
 var xScore = 0
 var oScore = 0
-var counter = 0
 top.addEventListener("click", topPlacement)
 middle.addEventListener("click", middlePlacement)
 bottom.addEventListener("click", bottomPlacement)
@@ -33,20 +32,49 @@ function reset() {
       bottomArray[i][j] = "&nbsp;"
     }
   }
+  button.style.visibility = "hidden"
   placeStuff()
 }
 function placeStuff() {
-  counter++
   for (var i = 1; i < 4; i++) {
     for (j = 1; j < 4; j++) {
       document.getElementById('top' + i + j).innerHTML = topArray[i-1][j-1]
+      if (topArray[i-1][j-1] === "X") {
+        document.getElementById('top' + i + j).style.color = "red"
+      } else if (topArray[i-1][j-1] === "O") {
+        document.getElementById('top' + i + j).style.color = "blue"
+      }
       document.getElementById('middle' + i + j).innerHTML = middleArray[i-1][j-1]
+      if (middleArray[i-1][j-1] === "X") {
+        document.getElementById('middle' + i + j).style.color = "red"
+      } else if (middleArray[i-1][j-1] === "O") {
+        document.getElementById('middle' + i + j).style.color = "blue"
+      }
       document.getElementById('bottom' + i + j).innerHTML = bottomArray[i-1][j-1]
+      if (bottomArray[i-1][j-1] === "X") {
+        document.getElementById('bottom' + i + j).style.color = "red"
+      } else if (bottomArray[i-1][j-1] === "O") {
+        document.getElementById('bottom' + i + j).style.color = "blue"
+      }
     }
   }
   document.getElementById("p1").innerHTML = "P1:" + xScore
   document.getElementById("p2").innerHTML = "P2:" + oScore
-  if (counter === 46) {
+  var counter = 0
+  for (var i = 0; i < 3; i++) {
+    for (var j = 0; j < 3; j++) {
+      if (topArray[i][j] !== "&nbsp;") {
+        counter++
+      }
+      if (middleArray[i][j] !== "&nbsp;") {
+        counter++
+      }
+      if (bottomArray[i][j] !== "&nbsp;") {
+        counter++
+      }
+    };
+  };
+  if (counter === 27) {
     button.style.visibility = "visible"
     if (xScore > oScore) {
       alert("X WINS!")
@@ -259,7 +287,7 @@ if (middleArray[0][0] === "X" && middleArray[0][1] === "X" && middleArray[0][2] 
   if (topArray[1][0] === "X" && middleArray[1][0] === "X" && bottomArray[1][0] === "X") {
     xScore++
   }
-  if (topArray[1][0] === "X" && middleArray[1][1] === "X" && bottomArray[0][2] === "X") {
+  if (topArray[1][0] === "X" && middleArray[1][1] === "X" && bottomArray[1][2] === "X") {
     xScore++
   }
   //////////////////////////////1,2
@@ -419,7 +447,7 @@ if (bottomArray[0][0] === "O" && bottomArray[0][1] === "O" && bottomArray[0][2] 
   if (topArray[1][0] === "O" && middleArray[1][0] === "O" && bottomArray[1][0] === "O") {
     oScore++
   }
-  if (topArray[1][0] === "O" && middleArray[1][1] === "O" && bottomArray[0][2] === "O") {
+  if (topArray[1][0] === "O" && middleArray[1][1] === "O" && bottomArray[1][2] === "O") {
     oScore++
   }
   //////////////////////////////1,2
