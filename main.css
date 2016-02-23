@@ -27,6 +27,8 @@ button {
 }
 section {
   color: silver;
+  box-shadow: 2px 2px 5px darkgray;
+  border-radius: 23px;
 }
 #p1 {
   font-size: 44px;

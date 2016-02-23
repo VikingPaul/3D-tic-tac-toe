@@ -36,6 +36,21 @@ function reset() {
   placeStuff()
 }
 function placeStuff() {
+  if (turn) {
+    document.getElementById("p1").style.border = "5px solid red"
+    document.getElementById("p2").style.border = "none"
+    document.getElementById("p1").style.background = "#285C15"
+    document.getElementById("p2").style.background = "none"
+    document.getElementById("p1").style.boxShadow = "2px 2px 5px darkgray"
+    document.getElementById("p2").style.boxShadow = "none"
+  } else {
+    document.getElementById("p2").style.background = "#285C15"
+    document.getElementById("p1").style.background = "none"
+    document.getElementById("p2").style.border = "5px solid blue"
+    document.getElementById("p1").style.border = "none"
+    document.getElementById("p2").style.boxShadow = "2px 2px 5px darkgray"
+    document.getElementById("p1").style.boxShadow = "none"
+  }
   for (var i = 1; i < 4; i++) {
     for (j = 1; j < 4; j++) {
       document.getElementById('top' + i + j).innerHTML = topArray[i-1][j-1]
