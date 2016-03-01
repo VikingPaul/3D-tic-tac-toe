@@ -35,6 +35,10 @@ function reset() {
   button.style.visibility = "hidden"
   placeStuff()
 }
+function speak(words) {
+  var msg = new SpeechSynthesisUtterance(words);
+  window.speechSynthesis.speak(msg);
+}
 function placeStuff() {
   if (turn) {
     document.getElementById("p1").style.border = "5px solid red"
@@ -92,11 +96,11 @@ function placeStuff() {
   if (counter === 27) {
     button.style.visibility = "visible"
     if (xScore > oScore) {
-      alert("X WINS!")
+      speak("X Wins")
     } else if (xScore < oScore) {
-      alert("O WINS!")
+      speak("O Wins")
     } else {
-      alert("TIE GAME!")
+      speak("Tie Game")
     }
   }
 }

@@ -1,8 +1,13 @@
+@font-face {
+  font-family: "Dyslexie";
+  src: url("Dyslexie Regular LP151146.ttf");
+}
 body {
   background-color: black;
   text-shadow: slategrey 6px 6px 5px;
 }
 header {
+  font-family: "Dyslexie";
   margin-left: 175px;
   color: gold;
   font-size: 60px;
@@ -24,11 +29,14 @@ button {
   background-color: slategray;
   box-shadow: 2px 2px 5px darkgray;
   visibility: hidden;
+  font-family: "Dyslexie";
 }
 section {
+  font-family: "Dyslexie";
   color: silver;
   box-shadow: 2px 2px 5px darkgray;
   border-radius: 23px;
+  padding: 0 10px;
 }
 #p1 {
   font-size: 44px;
