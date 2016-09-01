@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "Dyslexie";
+  src: url("Dyslexie Regular LP151146.ttf");
+}
+body {
+  background-color: black;
+  text-shadow: slategrey 6px 6px 5px;
+}
+header {
+  font-family: "Dyslexie";
+  margin-left: 175px;
+  color: gold;
+  font-size: 60px;
+  text-align: center;
+  text-shadow: #CFB53B 6px 6px 6px;
+  transform: skew(-43deg, -1deg);
+}
+button {
+  width: 100px;
+  margin: 10px 45%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, .2);
+  letter-spacing: 1.5px;
+  font-size: 13px;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+  color: #FFFFFF;
+  background-color: slategray;
+  box-shadow: 2px 2px 5px darkgray;
+  visibility: hidden;
+  font-family: "Dyslexie";
+}
+section {
+  font-family: "Dyslexie";
+  color: silver;
+  box-shadow: 2px 2px 5px darkgray;
+  border-radius: 23px;
+  padding: 0 10px;
+}
+#p1 {
+  font-size: 44px;
+  float: left;
+  color: red;
+}
+#p2 {
+  font-size: 44px;
+  float: right;
+  color: blue;
+}
+div {
+  border: 3px solid black;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 44px;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  margin: 2.5px;
+}
+article {
+  transform: skew(-43deg, 2deg);
+  width: 190px;
+  border: 2px dashed black;
+  position: relative;
+  margin: auto;
+}
+article:nth-child(2) {
+  background-color: #61E831;
+  z-index: 3;
+}
+article:nth-child(3) {
+  top: -15px;
+  background-color: #3F9121;
+  z-index: 2;
+}
+article:nth-child(4) {
+  top: -30px;
+  background-color: #285C15;
+  z-index: 1;
+}

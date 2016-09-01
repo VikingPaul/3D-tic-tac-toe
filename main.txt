@@ -1,0 +1,5 @@
+3D Tic Tac Toe.
+Connect 3 in any direction.
+Use the 3D playing field to your advantage.
+Add up your points too see who wins the game.
+Play again and again.
